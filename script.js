@@ -14,12 +14,16 @@ for (let i = 0; i <= 63; i++) {
   tile.style.width = "12.5%";
   tile.style.height = "12.5%";
 
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
+  console.log(randomColor);
+
   const row = Math.floor(i / 8);
 
   if ((i + row) % 2 === 0) {
-    tile.style.background = "red";
+    tile.style.background = `#${randomColor}`;
   } else {
-    tile.style.background = "black";
+    tile.style.background = `#${randomColor}`;
   }
 
   container.append(tile);
